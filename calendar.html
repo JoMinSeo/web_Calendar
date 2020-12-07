@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./calendarStyle.css">
+    <title>캘린더</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="content-wrap">
+            <div class="content-left">
+                <div class="main-wrap">
+                    <div id="main-day" class="main-day"></div>
+                    <div id="main-date" class="main-date"></div>
+                </div>
+            </div>
+            <div class="content-right">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>
+                                <label id="prev">
+                                    &#60;
+                                </label>
+                            </td>
+                            <td align="center" id="current-year-month" colspan="5"></td>
+                            <td>
+                                <label id="next">
+                                    &#62;
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sun" align="center">Sun</td>
+                            <td class="mon" align="center">Mon</td>
+                            <td class="tue" align="center">Tue</td>
+                            <td class="wed" align="center">Wed</td>
+                            <td class="thu" align="center">Thu</td>
+                            <td class="fri" align="center">Fri</td>
+                            <td class="sat" align="center">Sat</td>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body" class="calendar-body"></tbody>
+                </table>
+                <div id="compare-date" class="compare-date">Shows Date Comparison Results</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="calendar.js"></script>
+</body>
+
+</html>

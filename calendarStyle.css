@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+html, body{
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main{
+    align-content: center;
+    justify-content: center;
+    width: 100vh;
+    display: inline;
+    background:#27418C;
+}
+
+.content-wrap{
+    width: 100vh;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background:#F2F1F1;
+}
+
+.content-left{
+    background: #1D3273;
+    color: #ffffff;
+    float: left;
+    width: 100vh;
+}
+
+.main-wrap{
+    text-align: center;
+    padding: 20px 0 0;
+}
+
+.main-day{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.main-date{
+    font-size: 120px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.content-right{
+    float: left;
+    width: 90vh;
+    padding: 10px;
+}
+
+.sun{
+    color: #A60808;
+}
+
+.sat{
+    color: #27418C;
+}
+
+.content-right table tr td{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.active{
+    background: #27418C;
+    border-radius: 50%;
+    color: #ffffff;
+}
+
+.compare-date{
+    font-size: 16px;
+    text-align: left;
+}
+
+
+
+
