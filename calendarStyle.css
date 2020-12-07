@@ -18,7 +18,7 @@ html, body{
     margin: 0 auto;
     border-radius: 20px;
     overflow: hidden;
-    background:#F2F1F1;
+    background:#F2F1F1; 
 }
 
 .content-left{
@@ -46,7 +46,7 @@ html, body{
 
 .content-right{
     float: left;
-    width: 90vh;
+    width: 50vh;
     padding: 10px;
 }
 
@@ -75,6 +75,23 @@ html, body{
 .compare-date{
     font-size: 16px;
     text-align: left;
+}
+
+.calendar-input{
+    all: unset;
+    border: 1px solid #27418C;
+    border-radius: 8px;
+    width: 200px;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.right-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    vertical-align: middle;
 }
 
 

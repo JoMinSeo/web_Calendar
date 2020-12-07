@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -17,36 +17,40 @@
                     <div id="main-date" class="main-date"></div>
                 </div>
             </div>
-            <div class="content-right">
-                <table>
-                    <thead>
-                        <tr>
-                            <td>
-                                <label id="prev">
-                                    &#60;
-                                </label>
-                            </td>
-                            <td align="center" id="current-year-month" colspan="5"></td>
-                            <td>
-                                <label id="next">
-                                    &#62;
-                                </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="sun" align="center">Sun</td>
-                            <td class="mon" align="center">Mon</td>
-                            <td class="tue" align="center">Tue</td>
-                            <td class="wed" align="center">Wed</td>
-                            <td class="thu" align="center">Thu</td>
-                            <td class="fri" align="center">Fri</td>
-                            <td class="sat" align="center">Sat</td>
-                        </tr>
-                    </thead>
-                    <tbody id="calendar-body" class="calendar-body"></tbody>
-                </table>
-                <div id="compare-date" class="compare-date">Shows Date Comparison Results</div>
+            <div class="right-wrapper">
+                <div class="content-right">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>
+                                    <label id="prev">
+                                        &#60;
+                                    </label>
+                                </td>
+                                <td align="center" id="current-year-month" colspan="5"></td>
+                                <td>
+                                    <label id="next">
+                                        &#62;
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sun" align="center">Sun</td>
+                                <td class="mon" align="center">Mon</td>
+                                <td class="tue" align="center">Tue</td>
+                                <td class="wed" align="center">Wed</td>
+                                <td class="thu" align="center">Thu</td>
+                                <td class="fri" align="center">Fri</td>
+                                <td class="sat" align="center">Sat</td>
+                            </tr>
+                        </thead>
+                        <tbody id="calendar-body" class="calendar-body"></tbody>
+                    </table>
+                    <div id="compare-date" class="compare-date">Shows Date Comparison Results</div>
+                </div>
+                <input type="month" class="calendar-input" id="selectedDate">
             </div>
+            
         </div>
     </div>
 

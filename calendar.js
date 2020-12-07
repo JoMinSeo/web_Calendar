@@ -5,6 +5,7 @@ var nextBtn = document.getElementById("next");
 var mainTodayDate = document.getElementById("main-date");
 var mainTodayDay = document.getElementById("main-day");
 var compareDate = document.getElementById("compare-date");
+var selectDate = document.getElementById("selectedDate");
 
 var today = new Date(); // 오늘
 var clickDate = new Date(); // 선택한 날짜
@@ -73,6 +74,8 @@ var pageYear;
 prevBtn.addEventListener("click", prev);
 nextBtn.addEventListener("click", next);
 
+selectDate.addEventListener("change", onChangeMonth);
+
 var tdGroup = [];
 
 if (first.getFullYear() % 4 === 0) {
@@ -84,6 +87,11 @@ if (first.getFullYear() % 4 === 0) {
 window.onload = load();
 
 function load() {
+  selectDate.value = `${today.getFullYear}-${
+    today.getMonth() + 1 < 10
+      ? "0" + today.getMonth() + 1
+      : today.getMonth() + 1
+  }`;
   showCalendar();
   showMain();
   onloadCalendar();
@@ -148,7 +156,7 @@ function prev() {
     clickDate.getMonth() - 1,
     clickDate.getDate()
   );
-  console.log(clickDate);
+
   currentTitle.innerHTML =
     monthList[first.getMonth()] +
     "&nbsp;&nbsp;&nbsp;&nbsp;" +
@@ -207,6 +215,30 @@ function clickStart() {
   }
 }
 
+function onChangeMonth(e) {
+  console.log("시발람아");
+  const changeDate = new Date(e.target.value);
+  const changeYear = changeDate.getFullYear();
+  const changeMonth = changeDate.getMonth();
+
+  if (today.getMonth() + 1 !== changeMonth) {
+    pageFirst = new Date(changeYear, changeMonth, 1);
+    first = pageFirst;
+
+    currentTitle.innerHTML =
+      monthList[first.getMonth()] +
+      "&nbsp;&nbsp;&nbsp;&nbsp;" +
+      first.getFullYear();
+
+    clickDate = new Date(changeYear, changeMonth);
+    //lastMonthDay = new Date(selectedYear, selectedMonth, 0).getDate();
+    removeCalendar();
+    showCalendar();
+    showMain();
+    clickStart();
+  }
+}
+
 //클릭시 선택한 날짜를 바꾸는 함수
 function changeToday(e) {
   for (let i = 1; i <= pageYear[first.getMonth()]; i++) {
@@ -227,11 +259,7 @@ function changeToday(e) {
 
 //날짜 차이를 출력하는 함수
 function compareDatefun() {
-  const date = new Date(
-    first.getFullYear(),
-    first.getMonth(),
-    clickedDate1.id
-  );
+  const date = new Date(first.getFullYear(), first.getMonth(), clickedDate1.id);
   const subtractTime = date.getTime() - today.getTime();
 
   if (clickedDate1.length > 2) {
